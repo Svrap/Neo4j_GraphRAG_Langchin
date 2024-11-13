@@ -1,0 +1,11 @@
+Table Name,Column Name,Layer,Domain,Primary Key,Nullable,Data Type,Target Table Name,Target Column Name,Transformation
+PRV_Prescription_Report,prescription_id,PRV,Pharmacy Operations,Yes,No,Integer,,,
+PRV_Prescription_Report,total_quantity,PRV,Pharmacy Operations,No,Yes,Integer,,,sum from DWH_Prescriptions.total_quantity_dispensed
+PRV_Patient_Report,patient_id,PRV,Pharmacy Operations,Yes,No,Integer,,,
+PRV_Patient_Report,total_visits,PRV,Pharmacy Operations,No,Yes,Integer,,,sum from DWH_Patient_Summary.visit_count
+PRV_Drug_Usage_Report,drug_id,PRV,Pharmacy Operations,Yes,No,Integer,,,
+PRV_Drug_Usage_Report,total_dosage,PRV,Pharmacy Operations,No,Yes,Float,,,sum from DWH_Drug_Usage.total_dosage_dispensed
+PRV_Inventory_Report,drug_id,PRV,Pharmacy Operations,Yes,No,Integer,,,
+PRV_Inventory_Report,average_stock,PRV,Pharmacy Operations,No,Yes,Float,,,avg from DWH_Inventory.avg_stock_quantity
+PRV_Discount_Report,discount_id,PRV,Pharmacy Operations,Yes,No,Integer,,,
+PRV_Discount_Report,average_discount,PRV,Pharmacy Operations,No,Yes,Float,,,avg from DWH_Discounts.average_discount_applied

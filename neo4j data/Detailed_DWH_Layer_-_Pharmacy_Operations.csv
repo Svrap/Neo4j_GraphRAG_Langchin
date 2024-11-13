@@ -1,0 +1,11 @@
+Table Name,Column Name,Layer,Domain,Primary Key,Nullable,Data Type,Target Table Name,Target Column Name,Transformation
+DWH_Prescriptions,prescription_id,DWH,Pharmacy Operations,Yes,No,Integer,PRV_Prescription_Report,prescription_id,
+DWH_Prescriptions,total_quantity_dispensed,DWH,Pharmacy Operations,No,Yes,Integer,PRV_Prescription_Report,total_quantity,sum
+DWH_Patient_Summary,patient_id,DWH,Pharmacy Operations,Yes,No,Integer,PRV_Patient_Report,patient_id,
+DWH_Patient_Summary,visit_count,DWH,Pharmacy Operations,No,Yes,Integer,PRV_Patient_Report,total_visits,sum
+DWH_Drug_Usage,drug_id,DWH,Pharmacy Operations,Yes,No,Integer,PRV_Drug_Usage_Report,drug_id,
+DWH_Drug_Usage,total_dosage_dispensed,DWH,Pharmacy Operations,No,Yes,Float,PRV_Drug_Usage_Report,total_dosage,sum
+DWH_Inventory,drug_id,DWH,Pharmacy Operations,Yes,No,Integer,PRV_Inventory_Report,drug_id,
+DWH_Inventory,avg_stock_quantity,DWH,Pharmacy Operations,No,Yes,Float,PRV_Inventory_Report,average_stock,avg
+DWH_Discounts,discount_id,DWH,Pharmacy Operations,Yes,No,Integer,PRV_Discount_Report,discount_id,
+DWH_Discounts,average_discount_applied,DWH,Pharmacy Operations,No,Yes,Float,PRV_Discount_Report,average_discount,avg

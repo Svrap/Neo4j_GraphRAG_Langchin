@@ -1,0 +1,11 @@
+Table Name,Column Name,Layer,Domain,Primary Key,Nullable,Data Type,Target Table Name,Target Column Name,Transformation
+PRV_Patient_Report,patient_id,PRV,Patient Management,Yes,No,Integer,,,
+PRV_Patient_Report,total_visits,PRV,Patient Management,No,Yes,Integer,,,sum from DWH_Patient_Summary.total_visits
+PRV_Medical_Report,record_id,PRV,Patient Management,Yes,No,Integer,,,
+PRV_Medical_Report,common_conditions,PRV,Patient Management,No,Yes,String,,,most_common from DWH_Medical_Summary.common_diagnosis
+PRV_Prescription_Report,prescription_id,PRV,Patient Management,Yes,No,Integer,,,
+PRV_Drug_Report,drug_id,PRV,Patient Management,Yes,No,Integer,,,
+PRV_Billing_Report,billing_id,PRV,Patient Management,Yes,No,Integer,,,
+PRV_Billing_Report,total_billing_amount,PRV,Patient Management,No,Yes,Float,,,sum from DWH_Billing_Summary.total_billing
+PRV_Allergy_Report,patient_id,PRV,Patient Management,No,No,Integer,,,
+PRV_Allergy_Report,top_allergies,PRV,Patient Management,No,Yes,String,,,list from DWH_Allergy_Overview.common_allergies

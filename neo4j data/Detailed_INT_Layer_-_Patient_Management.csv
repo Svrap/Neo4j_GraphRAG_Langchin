@@ -1,0 +1,11 @@
+Table Name,Column Name,Layer,Domain,Primary Key,Nullable,Data Type,Target Table Name,Target Column Name,Transformation
+INT_Patient_Info,patient_id,INT,Patient Management,Yes,No,Integer,DWH_Patient_Summary,patient_id,
+INT_Patient_Info,patient_name,INT,Patient Management,No,No,String,DWH_Patient_Summary,patient_name,
+INT_Medical_Records,record_id,INT,Patient Management,Yes,No,Integer,DWH_Medical_Summary,record_id,
+INT_Medical_Records,diagnosis,INT,Patient Management,No,Yes,String,DWH_Medical_Summary,common_diagnosis,most_common
+INT_Prescription_History,prescription_id,INT,Patient Management,Yes,No,Integer,DWH_Prescription_Summary,prescription_id,
+INT_Prescription_History,drug_id,INT,Patient Management,No,No,Integer,DWH_Drug_Usage,drug_id,
+INT_Billing_Info,billing_id,INT,Patient Management,Yes,No,Integer,DWH_Billing_Summary,billing_id,
+INT_Billing_Info,amount,INT,Patient Management,No,No,Float,DWH_Billing_Summary,total_billing,sum
+INT_Allergies,patient_id,INT,Patient Management,No,No,Integer,DWH_Allergy_Overview,patient_id,
+INT_Allergies,allergy_type,INT,Patient Management,No,Yes,String,DWH_Allergy_Overview,common_allergies,list

@@ -1,0 +1,11 @@
+Table Name,Column Name,Layer,Domain,Primary Key,Nullable,Data Type,Target Table Name,Target Column Name,Transformation
+DWH_Patient_Summary,patient_id,DWH,Patient Management,Yes,No,Integer,PRV_Patient_Report,patient_id,
+DWH_Patient_Summary,total_visits,DWH,Patient Management,No,Yes,Integer,PRV_Patient_Report,total_visits,sum from INT_Patient_Info.visit_count
+DWH_Medical_Summary,record_id,DWH,Patient Management,Yes,No,Integer,PRV_Medical_Report,record_id,
+DWH_Medical_Summary,common_diagnosis,DWH,Patient Management,No,Yes,String,PRV_Medical_Report,common_conditions,most_common from INT_Medical_Records.diagnosis
+DWH_Prescription_Summary,prescription_id,DWH,Patient Management,Yes,No,Integer,PRV_Prescription_Report,prescription_id,
+DWH_Drug_Usage,drug_id,DWH,Patient Management,Yes,No,Integer,PRV_Drug_Report,drug_id,
+DWH_Billing_Summary,billing_id,DWH,Patient Management,Yes,No,Integer,PRV_Billing_Report,billing_id,
+DWH_Billing_Summary,total_billing,DWH,Patient Management,No,Yes,Float,PRV_Billing_Report,total_billing_amount,sum from INT_Billing_Info.amount
+DWH_Allergy_Overview,patient_id,DWH,Patient Management,No,No,Integer,PRV_Allergy_Report,patient_id,
+DWH_Allergy_Overview,common_allergies,DWH,Patient Management,No,Yes,String,PRV_Allergy_Report,top_allergies,list from INT_Allergies.allergy_type
