@@ -1,0 +1,13 @@
+Table Name,Column Name,Layer,Domain,Primary Key,Nullable,Data Type,Target Table Name,Target Column Name,Transformation
+INT_Prescriptions,prescription_id,INT,Pharmacy Operations,Yes,No,Integer,DWH_Prescriptions,prescription_id,
+INT_Prescriptions,patient_id,INT,Pharmacy Operations,No,No,Integer,DWH_Patient_Summary,patient_id,
+INT_Prescriptions,drug_id,INT,Pharmacy Operations,No,No,Integer,DWH_Drug_Usage,drug_id,
+INT_Prescriptions,dosage,INT,Pharmacy Operations,No,Yes,Float,DWH_Drug_Usage,total_dosage,sum
+INT_Prescriptions,quantity,INT,Pharmacy Operations,No,Yes,Integer,DWH_Drug_Usage,total_quantity,sum
+INT_Inventory,drug_id,INT,Pharmacy Operations,Yes,No,Integer,DWH_Inventory,drug_id,
+INT_Inventory,stock_quantity,INT,Pharmacy Operations,No,No,Integer,DWH_Inventory_Summary,avg_stock_quantity,avg
+INT_Suppliers,supplier_id,INT,Pharmacy Operations,Yes,No,Integer,DWH_Supplier_Summary,supplier_id,
+INT_Sales_Transactions,transaction_id,INT,Pharmacy Operations,Yes,No,Integer,DWH_Sales_Summary,transaction_id,
+INT_Insurance_Claims,claim_id,INT,Pharmacy Operations,Yes,No,Integer,DWH_Claims_Summary,claim_id,
+INT_Discounts,discount_id,INT,Pharmacy Operations,Yes,No,Integer,DWH_Discounts,discount_id,
+INT_Discounts,discount_percentage,INT,Pharmacy Operations,No,No,Float,DWH_Discounts,average_discount_applied,avg
